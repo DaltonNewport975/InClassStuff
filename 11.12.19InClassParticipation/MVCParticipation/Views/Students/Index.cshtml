@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MVCParticipation.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model) {
+    
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">@item.FirstName @item.LastName</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Student ID: @item.StudentID</h6>
+        <p class="card-text">@item.FirstName loves the color @item.FavoriteColor</p>
+    </div>
+</div>
+}
+
+
